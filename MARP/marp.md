@@ -35,7 +35,7 @@ paginate: true
 
 ## Marp vs. PowerPoint / Keynote
 
-| | Marp | PowerPoint / Keynote |
+| | Marp | PowerPoint/Keynote |
 |:--|:--|:--|
 | Authoring | Markdown text | Visual editor |
 | Content structure | Headings • lists • code | Text boxes • shapes |
@@ -74,14 +74,9 @@ paginate: true
 ---
 
 ## Quick start
-
 - **VS Code**
   - Install *Marp for VS Code*
   - Open `.md` • enable Marp preview
 - **CLI**
   - Install `@marp-team/marp-cli`
   - Run `marp slides.md --pdf`
-- **Web**
-  - Open [vscode.dev](https://vscode.dev/)
-  - Install *Marp for VS Code*
-  - Open Markdown • preview • export
