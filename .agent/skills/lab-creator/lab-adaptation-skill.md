@@ -52,14 +52,12 @@ Every lab presentation **must be in Marp format** (`marp: true`) and follow this
      theme: default
      paginate: true
      size: 16:9
-     style: |
-       ...
      ---
      ```
 2. **Slide Separators:**
    - Use `---` between every slide.
-3. **Alternating Visual Rhythm:**
-   - Alternate between dark background sections (standard) and light background sections (`<!-- _class: light -->`) to maintain audience engagement and high readability.
+3. **Light Visual Theme:**
+   - Use the default light theme and keep slides clear and readable. Avoid custom CSS and dark backgrounds.
 4. **Typography & Code:**
    - Clear headings (`Anton`, `Impact`, or sans-serif).
    - High contrast body text (`Inter`, system-ui).

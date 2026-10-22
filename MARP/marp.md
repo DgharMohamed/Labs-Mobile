@@ -3,13 +3,7 @@ marp: true
 theme: default
 paginate: true
 size: 16:9
-style: |
-  section { background: #111827; color: #f9fafb; font-family: Inter, system-ui, sans-serif; padding: 48px 64px; }
-  h1, h2 { font-family: Anton, Impact, sans-serif; color: #c4b5fd; }
-  h1 { font-size: 2.4em; } h2 { font-size: 1.65em; }
-  section.light { background: #f5f3ff; color: #111827; }
-  section.light h1, section.light h2 { color: #6d28d9; }
-  code { background: #ffffff20; padding: 2px 5px; }
+
 ---
 
 # Marp
