@@ -1,120 +1,150 @@
+---
+marp: true
+theme: default
+paginate: true
+size: 16:9
+style: |
+  section { background: #111827; color: #f9fafb; font-family: Inter, system-ui, sans-serif; padding: 48px 64px; }
+  h1, h2 { font-family: Anton, Impact, sans-serif; color: #93c5fd; }
+  h1 { font-size: 2.4em; } h2 { font-size: 1.65em; }
+  section.light { background: #eff6ff; color: #111827; }
+  section.light h1, section.light h2 { color: #1d4ed8; }
+  code { background: #ffffff20; padding: 2px 5px; }
+---
+
 # Markdown
 
-## What is Markdown?
+---
 
-* A simple markup language
-* Used to format text
-* Easy to learn and write
-* Uses plain text and simple symbols
+<!-- _class: light -->
+
+## Lab Plan
+
+1. Introduction
+2. Problems Encountered
+3. Solutions Implemented
 
 ---
 
-## Why Use Markdown?
+## Introduction
 
-* Simple
-* Fast
-* Easy to read
-* Easy to edit
-* Works on many platforms
+Markdown is a lightweight way to format plain text with simple symbols. It is commonly used for documentation, notes, project pages, and presentations.
+
+- **Objectives:** create readable structured documents and recognize common Markdown syntax.
+- **Concepts practiced:** headings, emphasis, lists, links, images, code blocks, tables, and task lists.
+- Markdown files commonly use the `.md` extension.
 
 ---
 
-## Basic Markdown
+<!-- _class: light -->
 
-### Headings
+## Problems Encountered
+
+- Inconsistent heading levels make documents hard to scan.
+- Missing blank lines or mismatched delimiters can break lists and code blocks.
+- Code fences without a language identifier lose syntax highlighting.
+- Markdown rendering varies slightly between platforms and extensions.
+
+---
+
+## Solutions Implemented
+
+- Use heading levels in order to show the document hierarchy.
+- Leave blank lines around block elements and close every fenced code block.
+- Add a language after code fences, such as `javascript` or `bash`.
+- Preview the document in the platform where it will be published.
+
+---
+
+<!-- _class: light -->
+
+## Headings and Text
 
 ```markdown
-# Heading 1
-## Heading 2
-### Heading 3
+# Main heading
+## Section heading
+### Subsection heading
+
+**Bold text**
+*Italic text*
+~~Strikethrough~~
 ```
 
-### Text Formatting
-
-```markdown
-**Bold**
-*Italic*
-```
+Use headings to organize ideas, not only to change text size.
 
 ---
 
-## Lists
-
-### Unordered List
+## Lists and Links
 
 ```markdown
 - HTML
 - CSS
 - JavaScript
+
+1. Learn the syntax
+2. Practice with examples
+3. Preview the result
+
+[Visit GitHub](https://github.com)
 ```
 
-### Ordered List
-
-```markdown
-1. Learn
-2. Practice
-3. Build
-```
+Use numbered lists when order matters and bullets when it does not.
 
 ---
 
-## Links
+<!-- _class: light -->
 
-```markdown
-[GitHub](https://github.com)
-```
-
----
-
-## Images
-
-```markdown
-![My Image](image.jpg)
-```
-
----
-
-## Code
-
-### Inline Code
-
-```markdown
-Use `console.log()`
-```
-
-### Code Block
+## Images and Code
 
 ````markdown
+![A descriptive image caption](images/example.png)
+
+Use `console.log()` for inline code.
+
 ```javascript
-console.log("Hello World!");
+const message = "Hello, Markdown!";
+console.log(message);
 ````
-
-````
-
----
-
-## Tables
-
-```markdown
-| Name | Language |
-|------|----------|
-| HTML | Markup   |
-| CSS  | Style    |
-| JS   | Script   |
-````
-
----
-
-## Task Lists
-
-```markdown
-- [x] HTML
-- [x] CSS
-- [ ] JavaScript
 ```
 
+Use meaningful alt text for images and a language label for fenced code.
+
 ---
 
-# Thank You
+## Tables and Task Lists
 
-Let's Markdown!
+```markdown
+| Name | Type |
+|:---|:---:|
+| HTML | Markup |
+| CSS | Styles |
+
+- [x] Create headings
+- [x] Add a code example
+- [ ] Preview on the target platform
+```
+
+Alignment markers are `:---` (left), `:---:` (center), and `---:` (right).
+
+---
+
+<!-- _class: light -->
+
+## Practice: Format a Short Note
+
+Create a Markdown note that includes:
+
+1. A title and two section headings.
+2. One ordered list and one unordered list.
+3. A link, a language-labeled code block, and a two-column table.
+4. A task list that tracks your progress.
+
+Preview the result and fix any formatting that does not render as expected.
+
+---
+
+## Key Takeaways
+
+- Markdown keeps source text simple and readable.
+- Headings, lists, and code fences give content structure.
+- Preview the rendered document on its intended platform.

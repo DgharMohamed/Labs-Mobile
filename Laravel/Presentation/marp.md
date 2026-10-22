@@ -1,96 +1,106 @@
 ---
 marp: true
-theme: gaia
+theme: default
 paginate: true
+size: 16:9
+style: |
+  section { background: #111827; color: #f9fafb; font-family: Inter, system-ui, sans-serif; padding: 48px 64px; }
+  h1, h2 { font-family: Anton, Impact, sans-serif; color: #fca5a5; }
+  h1 { font-size: 2.4em; } h2 { font-size: 1.65em; }
+  section.light { background: #fff1f2; color: #111827; }
+  section.light h1, section.light h2 { color: #be123c; }
+  code { background: #ffffff20; padding: 2px 5px; }
 ---
-
-<!-- _class: lead -->
 
 # Laravel
 
-- Framework PHP pour le développement Web
-- Son rôle • ses outils • ses usages
+---
+
+<!-- _class: light -->
+
+## Lab Plan
+
+1. Introduction
+2. Problems Encountered
+3. Solutions Implemented
 
 ---
 
-## Plan de la présentation
+## Introduction
 
-1. Qu’est-ce que Laravel ?
-2. Son rôle dans une application Web
-3. Le modèle MVC et le parcours d’une requête
-4. Ses outils et ses avantages
-5. Exemple de route
-6. Cas d’utilisation et activité
+Laravel is an open-source PHP framework used mainly on the server to build dynamic websites, business applications, and APIs.
 
----
-
-## 1. Qu’est-ce que Laravel ?
-
-- Framework **open source** écrit en **PHP**
-- Structure et composants réutilisables
-- Principalement utilisé côté serveur
-- Pour créer des sites dynamiques, des applications métier et des API
-- Laravel organise PHP ; il ne le remplace pas
+- **Objectives:** understand Laravel's role and follow a request through an application.
+- **Concepts:** routes, controllers, MVC, Eloquent, migrations, Blade, middleware, and validation.
+- Laravel provides structure and reusable tools; it does not replace PHP or web fundamentals.
 
 ---
 
-## 2. Son rôle dans une application Web
+<!-- _class: light -->
 
-- Recevoir les requêtes HTTP
-- Appliquer les règles métier
-- Lire ou modifier les données
-- Renvoyer une page HTML ou des données JSON
-- Organiser le code pour faciliter son évolution
+## Problems Encountered
 
----
-
-## 3. Architecture MVC
-
-| Composant | Rôle | Exemple Laravel |
-|:--|:--|:--|
-| **Model** | Représente et manipule les données | Eloquent |
-| **View** | Présente l’information | Blade |
-| **Controller** | Coordonne le traitement d’une requête | Contrôleur PHP |
+- New framework conventions and directory locations can be unfamiliar.
+- Putting routing, data access, and HTML output in one place makes code harder to maintain.
+- Database structure and application models can fall out of sync.
+- Unvalidated input or unescaped output can cause incorrect behavior and security issues.
 
 ---
 
-## Parcours d’une requête
+## Solutions Implemented
 
-**Navigateur** → **Route** → **Contrôleur** → **Modèle / base de données**
-
-- **Réponse :** vue HTML ou données JSON
-
-- Une route associe une URL et une méthode HTTP à un traitement
-- Le contrôleur applique la logique et coordonne les composants
+- Follow Laravel conventions and inspect the relevant route, controller, model, and view files.
+- Separate request handling, data access, and presentation using MVC responsibilities.
+- Use migrations to version database structure and Eloquent models to work with records.
+- Validate incoming data and use Blade's escaped `{{ }}` output for user-provided values.
 
 ---
 
-## 4. Outils courants
+<!-- _class: light -->
 
-- **Routage** — associer des URL à du code
-- **Middleware** — filtrer les requêtes, par exemple pour l’authentification
-- **Eloquent ORM** — manipuler les données avec des modèles PHP
-- **Migrations** — versionner la structure de la base de données
-- **Blade** — construire des vues HTML réutilisables
-- **Tests, validation, cache et files d’attente** — outils intégrés à l’écosystème
+## Laravel in a Web Application
 
----
-
-## Pourquoi choisir Laravel ?
-
-- Démarrer plus vite grâce aux composants prêts à l’emploi
-- Garder une structure cohérente
-- Réutiliser des conventions éprouvées
-- Faciliter les tests et la maintenance
-- Profiter d’un vaste écosystème PHP
-
-- Le framework aide, mais ne remplace ni la conception ni les tests ni les bonnes pratiques de sécurité
+- Receives HTTP requests and matches them to routes.
+- Applies application logic and reads or changes data.
+- Returns an HTML page or a structured response such as JSON.
+- Provides conventions that help organize and evolve the application.
 
 ---
 
-## 5. Exemple : une route simple
+## MVC Responsibilities
+
+| Part | Responsibility | Laravel example |
+|:---|:---|:---|
+| Model | Represents and accesses application data | Eloquent model |
+| View | Presents information to the user | Blade template |
+| Controller | Coordinates request handling | PHP controller |
+
+```text
+Browser → Route → Controller → Model ↔ Database
+                      ↓
+                 Blade View → HTML response
+```
+
+---
+
+<!-- _class: light -->
+
+## Common Laravel Tools
+
+- **Routing:** maps URLs and HTTP methods to handlers.
+- **Middleware:** filters requests, for example for authentication.
+- **Eloquent ORM:** works with database records through PHP models.
+- **Migrations:** records changes to database structure.
+- **Blade:** builds reusable HTML views.
+- **Validation and tests:** check input and application behavior.
+
+---
+
+## Example: a Route
 
 ```php
+<?php
+
 use Illuminate\Support\Facades\Route;
 
 Route::get('/bonjour', function () {
@@ -98,46 +108,52 @@ Route::get('/bonjour', function () {
 });
 ```
 
-- Fichier : `routes/web.php`
-- Méthode HTTP : `GET`
-- URL : `/bonjour`
-- Résultat : réponse texte
+- File: `routes/web.php`
+- Method: `GET`
+- Path: `/bonjour`
+- Response: the text `Bonjour !`
 
 ---
 
-## 6. Quand utiliser Laravel ?
+<!-- _class: light -->
 
-- Sites Web avec contenu dynamique
-- Applications métier avec utilisateurs et rôles
-- Formulaires et gestion de données
-- API pour applications mobiles ou front-end
-- Projets PHP qui bénéficient d’une structure et d’outils communs
+## Example: Controller and View
 
----
+```php
+Route::get('/articles', [ArticleController::class, 'index']);
 
-## Activité de recherche
+class ArticleController extends Controller
+{
+    public function index()
+    {
+        $articles = Article::all();
+        return view('articles', ['articles' => $articles]);
+    }
+}
+```
 
-- Ouvrir la documentation officielle de Laravel
-- Identifier trois fonctionnalités et expliquer leur rôle
-- Représenter le parcours d’une requête sous forme de schéma
-- Comparer Laravel et du PHP sans framework
-- Proposer un projet adapté à Laravel et justifier le choix
-
----
-
-## Ressources
-
-- [Documentation officielle Laravel](https://laravel.com/docs)
-- [Site officiel Laravel](https://laravel.com/)
-- [Manuel PHP en français](https://www.php.net/manual/fr/)
+The controller obtains data through the model and passes it to `resources/views/articles.blade.php`.
 
 ---
 
-<!-- _class: lead -->
+## When to Use Laravel
 
-# À retenir
+- Dynamic websites and business applications.
+- Applications with users, roles, and forms.
+- Data management workflows backed by a database.
+- APIs for mobile applications or browser front ends.
 
-- Laravel est un framework PHP côté serveur
-- MVC aide à organiser le code
-- Routage • Eloquent • migrations • Blade
-- Apprendre PHP et les bases du Web reste essentiel
+For practice, compare a simple Laravel route with the same behavior in plain PHP and identify what the framework provides.
+
+---
+
+<!-- _class: light -->
+
+## Key Takeaways
+
+- Laravel is a server-side PHP framework.
+- MVC separates data, presentation, and request coordination.
+- Routes, Eloquent, migrations, and Blade are core tools.
+- Sound design, testing, and security practices remain essential.
+
+**Resources:** [Laravel documentation](https://laravel.com/docs) · [PHP manual](https://www.php.net/manual/)

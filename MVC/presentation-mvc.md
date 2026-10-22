@@ -2,52 +2,66 @@
 marp: true
 theme: default
 paginate: true
+size: 16:9
 style: |
-  section {
-    font-size: 26px;
-    padding: 40px 60px;
-  }
-  h1 {
-    color: #c2410c;
-    font-size: 1.5em;
-  }
-  h2 {
-    color: #c2410c;
-    font-size: 1.3em;
-  }
-  code {
-    font-size: 0.85em;
-  }
-  pre {
-    font-size: 0.7em;
-  }
-  table {
-    font-size: 0.85em;
-  }
-  section.small pre {
-    font-size: 0.6em;
-  }
+  section { background: #111827; color: #f9fafb; font-family: Inter, system-ui, sans-serif; padding: 48px 64px; }
+  h1, h2 { font-family: Anton, Impact, sans-serif; color: #fdba74; }
+  h1 { font-size: 2.4em; } h2 { font-size: 1.65em; }
+  section.light { background: #fff7ed; color: #111827; }
+  section.light h1, section.light h2 { color: #c2410c; }
+  code { background: #ffffff20; padding: 2px 5px; }
+  pre { font-size: 0.8em; }
 ---
 
-# Qu'est-ce que l'architecture MVC ?
-
-**MVC** signifie **Model–View–Controller** (Modèle–Vue–Contrôleur) : une façon de répartir le code en trois rôles.
-
-- **Model (Modèle) :** les données et leur accès
-- **View (Vue) :** ce que voit l'utilisateur
-- **Controller (Contrôleur) :** traite la demande et coordonne les deux
-
-Résultat : un code plus lisible et plus facile à faire évoluer.
-
-<!--
-MVC est une manière d'organiser le code. Au lieu de mettre toutes les responsabilités au même endroit, on sépare les données, l'affichage et le traitement des demandes. Nous allons suivre le même exemple d'articles pour voir le rôle de chaque partie.
--->
+# MVC Architecture
 
 ---
 
-## Le Model (Modèle)
+<!-- _class: light -->
 
-Avec Laravel, un modèle **Eloquent** facilite la lecture et la modification des données.
+## Lab Plan
+
+1. Introduction
+2. Problems Encountered
+3. Solutions Implemented
+
+---
+
+## Introduction
+
+MVC means Model–View–Controller. It separates application data, presentation, and request coordination into distinct responsibilities.
+
+- **Objectives:** explain each MVC role and follow a request through a Laravel example.
+- **Concepts:** Eloquent models, Blade views, controllers, routes, and HTTP requests.
+- **Practice:** build an article list flow from route to HTML response.
+
+---
+
+<!-- _class: light -->
+
+## Problems Encountered
+
+- Mixing database queries, request handling, and HTML in one file makes changes difficult to isolate.
+- A view can become coupled to data access when it queries records directly.
+- Controllers can become hard to maintain when they contain presentation markup.
+- Confusing a route with a controller can obscure how a request is dispatched.
+
+---
+
+## Solutions Implemented
+
+- Put data access in the model, presentation in the view, and request coordination in the controller.
+- Define a route that maps an HTTP method and URL to a controller action.
+- Pass the data needed by a view from the controller.
+- Keep each layer focused and follow the request flow when debugging.
+
+---
+
+<!-- _class: light -->
+
+## The Model
+
+An Eloquent model represents and provides access to a type of application data.
 
 **`app/Models/Article.php`**
 
@@ -63,26 +77,18 @@ class Article extends Model
 }
 ```
 
-- Laravel associe ce modèle à la table `articles`
-- Exemple : `Article::all()` récupère tous les articles
-
-<!--
-Le modèle décrit ici l'objet Article. Laravel s'appuie sur Eloquent pour relier ce modèle aux données stockées dans la table articles. Le contrôleur pourra lui demander les articles, sans avoir à écrire lui-même toute la requête SQL.
--->
+By convention, Laravel associates `Article` with the `articles` table. `Article::all()` retrieves its records.
 
 ---
 
-<!-- _class: small -->
+## The View
 
-## La View (Vue)
-
-Les vues Blade se trouvent dans `resources/views`.
+Blade templates display information passed to them by the controller.
 
 **`resources/views/articles.blade.php`**
 
 ```html
-<h1>Liste des articles</h1>
-
+<h1>Articles</h1>
 <ul>
     @forelse ($articles as $article)
         <li>
@@ -90,25 +96,20 @@ Les vues Blade se trouvent dans `resources/views`.
             <p>{{ $article->content }}</p>
         </li>
     @empty
-        <li>Aucun article pour le moment.</li>
+        <li>No articles yet.</li>
     @endforelse
 </ul>
 ```
 
-- `@forelse` parcourt la liste et gère le cas vide
-- `{{ ... }}` affiche une valeur (échappée par défaut)
-
-<!--
-La vue s'occupe de l'affichage, pas de la recherche en base de données. Ici, Blade parcourt les articles reçus et construit une liste HTML. Les doubles accolades affichent le titre et le contenu en échappant les caractères spéciaux.
--->
+`@forelse` handles an empty list; `{{ ... }}` escapes output by default.
 
 ---
 
-<!-- _class: small -->
+<!-- _class: light -->
 
-## Le Controller (Contrôleur)
+## Route and Controller
 
-**Route** (`routes/web.php`)
+**Route in `routes/web.php`:**
 
 ```php
 use App\Http\Controllers\ArticleController;
@@ -117,52 +118,53 @@ use Illuminate\Support\Facades\Route;
 Route::get('/articles', [ArticleController::class, 'index']);
 ```
 
-**`app/Http/Controllers/ArticleController.php`**
+**Controller action:**
 
 ```php
-class ArticleController extends Controller
+public function index()
 {
-    public function index(): View
-    {
-        $articles = Article::all();
-
-        return view('articles', ['articles' => $articles]);
-    }
+    $articles = Article::all();
+    return view('articles', ['articles' => $articles]);
 }
 ```
 
-1. La route relie `GET /articles` à `index`
-2. `Article::all()` demande les articles au modèle
-3. `view(...)` envoie la liste à `articles.blade.php`
+---
 
-<!--
-Quand le navigateur demande /articles, la route appelle index. Le contrôleur demande au modèle tous les articles, puis les transmet à la vue Blade. Le contrôleur coordonne les deux autres composants, mais il ne construit pas lui-même le HTML.
--->
+## Follow the Request
+
+```text
+Browser -- GET /articles --> Route --> ArticleController@index
+                                      |           |
+                                      |           +--> Article model --> Database
+                                      |                         |
+Browser <-- HTML response <-- Blade view <-- articles collection
+```
+
+1. The route dispatches the request to `index`.
+2. The controller asks the model for articles.
+3. The controller passes the collection to the Blade view.
+4. The view renders the HTML response.
 
 ---
 
-## Fonctionnement global de MVC
+<!-- _class: light -->
 
-```text
-Utilisateur ── GET /articles ──► Route ──► Controller
-                                              │  ▲
-                                              ▼  │
-                                        Model ⇄ Base de données
-                                              │
-                                              ▼
-Utilisateur ◄────── HTML ◄────────────── View (Blade)
-```
+## Responsibilities at a Glance
 
-| Composant | Rôle dans l'exemple |
-| --- | --- |
-| **Model** | Accède aux données avec Eloquent |
-| **View** | Affiche les articles avec Blade |
-| **Controller** | Coordonne la requête, le modèle et la vue |
+| Part | Responsibility in the article example |
+|:---|:---|
+| Route | Maps `GET /articles` to the controller action |
+| Model | Retrieves article records through Eloquent |
+| Controller | Coordinates retrieval and response rendering |
+| View | Displays the article collection as HTML |
 
-**Conclusion :** MVC sépare les responsabilités et rend l'application plus claire à faire évoluer.
+---
 
-**Sources :** [laravel.com/docs](https://laravel.com/docs) (Eloquent, Vues, Contrôleurs)
+## Key Takeaways
 
-<!--
-Pour résumer, la route oriente la demande, le contrôleur coordonne le travail, le modèle accède aux données et la vue les affiche. En séparant ces rôles, MVC aide l'équipe à comprendre et à faire évoluer l'application plus facilement.
--->
+- MVC separates data access, presentation, and request coordination.
+- The route directs a request to a controller action.
+- The model accesses records; the view renders the data it receives.
+- Clear responsibilities make an application easier to understand and change.
+
+**Source:** [Laravel documentation](https://laravel.com/docs) (Eloquent, views, and controllers).

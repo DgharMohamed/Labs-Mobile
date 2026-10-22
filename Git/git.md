@@ -2,166 +2,141 @@
 marp: true
 theme: default
 paginate: true
+size: 16:9
+style: |
+  section { background: #111827; color: #f9fafb; font-family: Inter, system-ui, sans-serif; padding: 48px 64px; }
+  h1, h2 { font-family: Anton, Impact, sans-serif; color: #fbbf24; }
+  h1 { font-size: 2.4em; } h2 { font-size: 1.65em; }
+  section.light { background: #fffbeb; color: #111827; }
+  section.light h1, section.light h2 { color: #92400e; }
+  code { background: #ffffff20; padding: 2px 5px; }
+---
 
+# Git and GitHub
 
 ---
 
-# Git & GitHub
+<!-- _class: light -->
 
-### Version Control et collaboration
+## Lab Plan
 
-
-Présenté par : Oumaima Mahfoud
-SOLICODE
-
----
-# Plan de la présentation
-
-1. **Introduction**
-
-2. **Comprendre Git et GitHub**
-
-3. **Les fondamentaux de Git**
- 
-
-4. **GitHub et le travail collaboratif**
-
-
-5. **Les commits Git**
-6. **Conclusion et ressources utiles**
-----
-
-# 1. Introduction
-
-Imaginez que vous travaillez sur un projet et qu’après plusieurs modifications, votre code ne fonctionne plus. Vous voulez revenir à une ancienne version, mais vous ne savez pas comment faire.
-
+1. Introduction
+2. Problems Encountered
+3. Solutions Implemented
 
 ---
 
-# 2. Qu'est-ce que Git ?
+## Introduction
 
-Git est un système de contrôle de versions .
+Git records changes to files over time. GitHub hosts Git repositories online and supports collaboration around them.
 
-Il permet de :
-
-- Suivre les modifications du code.
-- Conserver l'historique du projet.
-- Comparer différentes versions.
-- Retrouver un état précédent.
-- Travailler sur plusieurs branches.
+- **Objectives:** understand version control, the change lifecycle, and remote collaboration.
+- **Concepts:** repository, working directory, staging area, commit, branch, remote, merge, pull request, and issue.
+- **Tools practiced:** `git` commands and GitHub repositories.
 
 ---
 
-# 3. Qu'est-ce que GitHub ?
+<!-- _class: light -->
 
-GitHub est une plateforme en ligne qui héberge des dépôts Git.
+## Problems Encountered
 
-Elle permet de :
-
-- Stocker et partager des projets.
-- Collaborer avec d'autres développeurs.
-- Examiner les modifications.
-- Gérer les Pull Requests et les Issues.
-- Présenter son portfolio technique.
-
+- Changes can be lost or hard to trace when no version history exists.
+- Committing without reviewing the staging area can include unintended files.
+- Divergent local and remote changes can create conflicts during synchronization.
+- Committing directly to the main branch makes parallel work harder to review.
 
 ---
 
-# 5. Les concepts essentiels
+## Solutions Implemented
 
-- **Repository :** dépôt contenant les fichiers et l'historique du projet.
-- **Working Directory :** espace de travail.
-- **Staging Area :** zone de préparation des modifications.
-- **Commit :** enregistrement d'un ensemble de modifications.
-- **Branch :** branche indépendante de développement.
-- **Remote :** dépôt distant.
-- **Merge :** intégration des changements d'une branche.
+- Check `git status` and inspect `git diff` before staging and committing.
+- Stage only intended files and write commits that describe one coherent change.
+- Pull or fetch remote changes regularly and resolve conflicts by reviewing both versions.
+- Use feature branches and pull requests to isolate and review collaborative changes.
 
 ---
-# 6. Installation et configuration
 
-Vérifier Git :
+<!-- _class: light -->
 
-```bash
-git --version
+## Git and GitHub
+
+| Tool | Role |
+|:---|:---|
+| Git | Tracks project history locally and supports branching and merging |
+| GitHub | Hosts repositories and provides collaboration features such as issues and pull requests |
+
+Git is the version control system; GitHub is one service for hosting and collaborating on Git repositories.
+
+---
+
+## The Change Lifecycle
+
+```text
+Working directory → Staging area → Local repository → Remote repository
+      edit              git add          git commit          git push
 ```
-
-Configurer son identité :
-
-```bash
-git config --global user.name "Votre Nom"
-git config --global user.email "votre@email.com"
-```
-
-Vérifier la configuration :
-
-```bash
-git config --list
-```
-
-
----
-# 7. Le cycle de vie d'une modification
-
-1. Modifier les fichiers.
-2. Préparer les changements avec `git add`.
-3. Enregistrer les changements avec `git commit`.
-4. Publier les commits avec `git push`.
 
 ```bash
 git status
-git add .
-git commit -m "feat: add homepage"
+git diff
+git add src/app.js
+git diff --staged
+git commit -m "feat: add category filter"
 git push
 ```
 
+---
+
+<!-- _class: light -->
+
+## Setup and Core Commands
+
+```bash
+git --version
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+git init
+git status
+git log --oneline
+```
+
+| Command | Purpose |
+|:---|:---|
+| `git add` | Stage selected changes |
+| `git commit` | Save a snapshot in local history |
+| `git diff` | Review unstaged or staged changes |
+| `git clone` | Copy a remote repository locally |
 
 ---
 
-# 8. Les commandes fondamentales
-
-| Commande | Rôle |
-|---|---|
-| `git init` | Initialiser un dépôt |
-| `git status` | Vérifier son état |
-| `git add` | Préparer les modifications |
-| `git commit` | Enregistrer les modifications |
-| `git log` | Consulter l'historique |
-| `git diff` | Comparer les changements |
-
----
-
-# 9. GitHub et les dépôts distants
-
-- `git clone` : copier un dépôt distant.
-- `git remote` : gérer les dépôts distants.
-- `git push` : publier les commits.
-- `git pull` : récupérer et intégrer les changements distants.
-
-Ces commandes permettent de synchroniser le travail entre l'ordinateur et GitHub.
-
----
-
-# 10. Les branches
-
-Une branche permet de développer une fonctionnalité sans travailler directement sur la branche principale.
+## Branches and Remotes
 
 ```bash
 git switch -c feature/navbar
-git add .
+# Make and review the change
+git add src/navbar.js
 git commit -m "feat: add navbar"
-git switch main
-git merge feature/navbar
+git push -u origin feature/navbar
 ```
 
+Open a pull request on GitHub so the branch can be reviewed and integrated. Use `git pull` to fetch and integrate updates from the configured remote.
 
 ---
 
+<!-- _class: light -->
 
-# Conclusion
+## Issues and Collaboration
 
-Git nous aide à suivre l'évolution de notre code.
+- Use **issues** to describe work, defects, and discussion.
+- Link a branch or pull request to the issue it addresses.
+- Review changes before merging and communicate any requested revisions.
+- Keep commits focused so history is easier to understand.
 
-GitHub nous permet de partager nos projets et de collaborer avec d'autres développeurs.
+---
 
-**La règle essentielle : commencer à versionner son projet dès le début.**
+## Key Takeaways
+
+- Git provides a local history of project changes.
+- Staging lets you choose what goes into a commit.
+- Branches and pull requests support safer collaboration.
+- Review status and diffs before sharing changes.

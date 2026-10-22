@@ -1,82 +1,140 @@
 ---
 marp: true
-theme: gaia
+theme: default
 paginate: true
+size: 16:9
+style: |
+  section { background: #111827; color: #f9fafb; font-family: Inter, system-ui, sans-serif; padding: 48px 64px; }
+  h1, h2 { font-family: Anton, Impact, sans-serif; color: #c4b5fd; }
+  h1 { font-size: 2.4em; } h2 { font-size: 1.65em; }
+  section.light { background: #f5f3ff; color: #111827; }
+  section.light h1, section.light h2 { color: #6d28d9; }
+  code { background: #ffffff20; padding: 2px 5px; }
 ---
-
-<!-- _class: lead -->
 
 # Marp
 
-- Presentations from Markdown
-- Write once • export anywhere
+---
+
+<!-- _class: light -->
+
+## Lab Plan
+
+1. Introduction
+2. Problems Encountered
+3. Solutions Implemented
 
 ---
 
-## What is Marp?
+## Introduction
 
-- Markdown-based presentation ecosystem
-- Turns Markdown files into slide decks
-- **Philosophy:** content first, presentation as code
-- Plain-text source • readable • version-controllable
+Marp is a Markdown-based presentation ecosystem. A plain-text Markdown source can be rendered as a slide deck and exported to several formats.
 
----
-
-## Features
-
-- **Markdown formatting**
-  - Headings • lists • links • images • code
-- **Built-in themes**
-  - Default • Gaia • Uncover
-- **Multi-format export**
-  - HTML • PDF • PowerPoint • PNG • JPEG
+- **Objectives:** understand Marp's slide syntax and create a simple presentation.
+- **Concepts:** front matter, slide separators, themes, directives, and export.
+- **Tools practiced:** Marp for VS Code and the Marp CLI.
 
 ---
 
-## Marp vs. PowerPoint / Keynote
+<!-- _class: light -->
 
-| | Marp | PowerPoint/Keynote |
-|:--|:--|:--|
-| Authoring | Markdown text | Visual editor |
-| Content structure | Headings • lists • code | Text boxes • shapes |
-| Styling | Themes • CSS | Templates • visual controls |
-| Collaboration | Git • text diffs | App collaboration tools |
-| Export | HTML • PDF • PPTX • images | PDF • PPTX • images |
+## Problems Encountered
+
+- A missing `marp: true` setting can prevent Markdown from being treated as a Marp deck.
+- Missing or misplaced `---` separators can combine content into the wrong slide.
+- Dense slides and oversized code examples can overflow the slide canvas.
+- A presentation may look different across themes or exported formats.
 
 ---
 
-## Front matter: minimal setup
+## Solutions Implemented
 
-```markdown
+- Add valid YAML front matter at the beginning of the source file.
+- Use `---` on its own line between slides and preview the slide count.
+- Keep one main idea per slide and split long examples across slides.
+- Check the rendered preview and the final export in the intended format.
+
+---
+
+<!-- _class: light -->
+
+## What Marp Provides
+
+- Markdown formatting for headings, lists, links, images, and code.
+- Built-in themes such as `default`, `gaia`, and `uncover`.
+- Export to HTML, PDF, PowerPoint, PNG, and JPEG.
+- Text-based source that is easy to read, diff, and version with Git.
+
+---
+
+## Minimal Presentation
+
+````markdown
 ---
 marp: true
-theme: gaia
+theme: default
 paginate: true
+size: 16:9
 ---
 
 # My presentation
 
 - First key point
 - Second key point
+````
+
+The front matter controls deck-wide options; the first heading begins the first slide.
+
+---
+
+<!-- _class: light -->
+
+## Directives and Slide Classes
+
+```markdown
+<!-- Global values belong in YAML front matter. -->
+<!-- _class: lead -->
+
+# A lead slide
+
+---
+
+<!-- _class: light -->
+
+## A light slide
+```
+
+Use global directives for deck settings and the underscore-prefixed form for slide-local settings.
+
+---
+
+## Start a Deck
+
+**VS Code:** install Marp for VS Code, open a `.md` file, and use the Marp preview.
+
+**CLI:** install `@marp-team/marp-cli`, then run:
+
+```bash
+npx @marp-team/marp-cli slides.md --html
+npx @marp-team/marp-cli slides.md --pdf
+npx @marp-team/marp-cli slides.md --pptx
 ```
 
 ---
 
-## Core directives
+<!-- _class: light -->
 
-- **Global** — YAML front matter
-  - `theme: gaia` • `paginate: true`
-  - `header: 'Course notes'` • `footer: 'Marp basics'`
-- **Slide-local** — HTML comment • `_` prefix
-  - `<!-- _theme: uncover -->` • `<!-- _paginate: false -->`
-  - `<!-- _header: 'Section 1' -->` • `<!-- _footer: 'Draft' -->`
+## Slide Design Checklist
+
+- Keep a clear title and a single main point per slide.
+- Use concise text and language-labeled code blocks.
+- Check contrast, font size, and content overflow in preview.
+- Recheck the generated file after export.
 
 ---
 
-## Quick start
-- **VS Code**
-  - Install *Marp for VS Code*
-  - Open `.md` • enable Marp preview
-- **CLI**
-  - Install `@marp-team/marp-cli`
-  - Run `marp slides.md --pdf`
+## Key Takeaways
+
+- Marp turns Markdown into slides using front matter and separators.
+- Themes and CSS can shape the deck's appearance.
+- Preview and inspect exports before presenting.
