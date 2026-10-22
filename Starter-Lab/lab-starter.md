@@ -176,29 +176,13 @@ style: |
 
 Enabled the relevant file-explorer setting so hidden files and folders, including `.git`, could be seen.
 
-### 02 — Display README.md
+### 02 — Display .md extention
 
-Adjusted the relevant VS Code option/extension setting so `README.md` appeared in the explorer.
+Adjusted the relevant VS Code option/extension setting so `.md` appeared in the explorer.
 
 ### 03 — Remember code changes
 
 Installed **Todo Lens** to highlight important comments and reminders in the code.
-
----
-
-<!-- _class: light -->
-
-## Configure a VS Code Extension
-
-### Solutions Implemented
-
-### 04 — Preview web pages
-
-Installed **Live Server** to launch a local development server and automatically refresh web pages after changes.
-
-### 05 — Preview Marp slides
-
-Installed/configured the **Marp extension** so Markdown presentation files could be viewed in slide preview.
 
 ---
 
