@@ -163,7 +163,6 @@ style: |
 - Hidden files and folders, such as `.git`, were not visible in the file explorer.
 - The `README.md` file extention `.md` not displayed as expected.
 - We sometimes forgot which lines of code needed to be modified.
-- Marp presentation files did not open in the expected preview.
 
 ---
 
