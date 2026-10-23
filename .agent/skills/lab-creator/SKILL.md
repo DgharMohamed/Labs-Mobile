@@ -47,6 +47,7 @@ Create well-organized educational labs in the repository. Each lab must focus on
 ### 4. Presentation
 * Create a `presentation.md` for the lab.
 * The presentation should summarize the key concepts of the lab.
+* Include a concise plan slide that previews the lab's main sections.
 * Use a presentation-friendly format (e.g., Marp directives).
 
 ## README.md Requirements

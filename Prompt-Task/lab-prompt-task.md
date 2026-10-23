@@ -16,6 +16,14 @@ Apprendre à formuler une demande précise, à vérifier la réponse de l’IA e
 
 ---
 
+## Plan du lab
+
+1. Découvrir la méthode C-O-C-R.
+2. Améliorer un prompt vague.
+3. Tester et réviser son propre prompt.
+
+---
+
 ## Une méthode simple : C-O-C-R
 
 Un prompt utile précise :

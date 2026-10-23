@@ -15,6 +15,14 @@ Dans ce lab, on débogue cinq problèmes courants dans une page de blog.
 
 ---
 
+## Plan du lab
+
+1. Lire et comprendre les erreurs JavaScript.
+2. Diagnostiquer cinq problèmes courants.
+3. Corriger les problèmes et vérifier le résultat.
+
+---
+
 ## Une méthode simple
 
 Pour chaque problème :
