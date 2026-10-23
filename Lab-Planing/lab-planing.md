@@ -68,21 +68,30 @@ Pour préparer un lab, définir :
 
 ---
 
-## Stack du blog
+## Stack du blog — serveur et données
 
-| Technologie | Exemple de sujet de lab |
+| Technologie | Exemple de lab |
 | --- | --- |
-| Laravel | Créer une route ou traiter un formulaire |
-| PHP natif | Étudier une notion du langage PHP |
-| MySQL | Enregistrer et récupérer des articles |
-| JSON | Définir les réponses d’une API du blog |
-| JavaScript | Vérifier un formulaire ou appeler une API |
-| Alpine.js | Ajouter une interaction légère à une page |
-| Tailwind CSS | Construire le style d’un formulaire ou d’une liste |
-| Preline UI | Intégrer des composants d’interface basés sur Tailwind CSS |
-| Kotlin | Consommer l’API du blog depuis Android |
+| Laravel | Traiter un formulaire |
+| PHP natif | Étudier une notion PHP |
+| MySQL | Enregistrer des articles |
+| JSON | Définir une réponse d’API |
 
 Choisir seulement les technologies nécessaires au lab.
+
+---
+
+## Stack du blog — interfaces
+
+| Technologie | Exemple de lab |
+| --- | --- |
+| JavaScript | Appeler une API |
+| Alpine.js | Ajouter une interaction légère |
+| Tailwind CSS | Mettre en forme une page |
+| Preline UI | Intégrer un composant d’interface |
+| Kotlin | Consommer l’API depuis Android |
+
+Preline UI fournit des composants d’interface basés sur Tailwind CSS.
 
 ---
 
