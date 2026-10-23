@@ -19,9 +19,10 @@ Create well-organized educational labs in the repository. Each lab must focus on
    * `presentation.md`
 4. Write content in clear, simple English unless another language is requested.
 5. Keep explanations concise, accurate, and suitable for students.
-6. Do not invent technical facts or present unverified information as fact.
-7. Avoid duplicating existing labs. Inspect the repository before creating a new lab.
-8. Preserve existing files and never overwrite user content without permission.
+6. Keep every new lab as simple as possible: focus on its learning objectives, use only the explanations, steps, examples, and tools students need, and remove repetition or unnecessary detail.
+7. Do not invent technical facts or present unverified information as fact.
+8. Avoid duplicating existing labs. Inspect the repository before creating a new lab.
+9. Preserve existing files and never overwrite user content without permission.
 
 ## Lab Structure
 
