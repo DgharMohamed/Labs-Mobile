@@ -79,6 +79,7 @@ Pour préparer un lab, définir :
 | JavaScript | Vérifier un formulaire ou appeler une API |
 | Alpine.js | Ajouter une interaction légère à une page |
 | Tailwind CSS | Construire le style d’un formulaire ou d’une liste |
+| Preline UI | Intégrer des composants d’interface basés sur Tailwind CSS |
 | Kotlin | Consommer l’API du blog depuis Android |
 
 Choisir seulement les technologies nécessaires au lab.
@@ -111,7 +112,7 @@ Choisir seulement les technologies nécessaires au lab.
 
 ## Technologie et résultat attendu
 
-**Technologies :** Laravel et MySQL pour le serveur et le stockage ; Blade et Tailwind CSS pour le formulaire.
+**Technologies :** Laravel et MySQL pour le serveur et le stockage ; Blade, Tailwind CSS et Preline UI pour construire le formulaire et ses composants.
 
 Ajouter JavaScript ou Alpine.js uniquement si une interaction côté navigateur est demandée.
 
