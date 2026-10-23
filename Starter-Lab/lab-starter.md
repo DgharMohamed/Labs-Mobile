@@ -22,9 +22,9 @@ size: 16:9
 
 ## Lab Plan
 
-1. Problems encountered during the lab
-2. Showing hidden files and folders
-3. IDE & Extension Configuration
+1. Introduction
+2. Problems Encountered
+3. Solutions Implemented
 
 
 ---

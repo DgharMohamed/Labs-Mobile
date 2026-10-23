@@ -15,11 +15,11 @@ Dans ce lab, on débogue cinq problèmes courants dans une page de blog.
 
 ---
 
-## Plan du lab
+## Lab Plan
 
-1. Lire et comprendre les erreurs JavaScript.
-2. Diagnostiquer cinq problèmes courants.
-3. Corriger les problèmes et vérifier le résultat.
+1. Introduction
+2. Problems Encountered
+3. Solutions Implemented
 
 ---
 

@@ -16,11 +16,11 @@ Apprendre à formuler une demande précise, à vérifier la réponse de l’IA e
 
 ---
 
-## Plan du lab
+## Lab Plan
 
-1. Découvrir la méthode C-O-C-R.
-2. Améliorer un prompt vague.
-3. Tester et réviser son propre prompt.
+1. Introduction
+2. Problems Encountered
+3. Solutions Implemented
 
 ---
 
