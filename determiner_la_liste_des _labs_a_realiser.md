@@ -17,7 +17,12 @@
 15. Scrum
 16. UX Design
 17. Figma
-18. 
+18. Laravel
+19. Prompt
+20. Starter Lab
+21. Erreur-JS
+22. Markdown
+23.
 
 
    
