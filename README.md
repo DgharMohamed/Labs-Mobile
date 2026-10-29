@@ -9,7 +9,7 @@ Welcome to the `Labs-Mobile` repository! This repository collects learning labs,
 | Markdown | Learn Markdown syntax for headings, formatting, lists, links, images, code, tables, and task lists. | [Markdown guide](Markdown/markdown.md) |
 | Marp | Create slide decks with Markdown and Marp, and view an exported presentation in a browser. | [Marp presentation](MARP/marp.md) · [Exported slides](MARP/index.html) |
 | Antigravity | Practice a supervised AI-agent workflow: plan, review, execute, and verify. | [Antigravity lab](Antigrafity/Lab_Antigrafity.md) |
-| Git and GitHub | Learn version control, commits, branches, remotes, issues, and pull-request collaboration. | [Git lab](Git/git.md) |
+| Git and GitHub | Learn version control, commits, branches, remotes, issues, and pull-request collaboration. | [Git lab](Lab-Git/git.md) |
 | MVC Architecture | Understand Model–View–Controller and follow a request through a Laravel application. | [MVC presentation](Laravel/MVC/presentation-mvc.md) |
 | JavaScript Debugging | Diagnose and fix five common DOM, API, data-format, network, and script-order errors. | [Lab instructions](Erreur-js/lab-erreur-js.md) |
 | Clear Prompts | Write, test, and refine prompts using context, objective, instructions, and expected result. | [Prompt lab](Prompt-Task/lab-prompt-task.md) |
