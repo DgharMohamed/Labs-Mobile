@@ -21,6 +21,7 @@ size: 16:9
 ### Un socle pour organiser les offres d'emploi
 
 **Apprenant(e) :** Dghar Mohamed<br>
+**Encadrant :** ES-SARRAJ FOUAD
 
 *Projet technique · SoliCode Tanger*
 

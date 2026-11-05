@@ -8,6 +8,8 @@ size: 16:9
 
 # MVC Architecture
 
+**Encadrant :** ES-SARRAJ FOUAD
+
 ---
 
 <!-- _class: light -->

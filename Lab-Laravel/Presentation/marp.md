@@ -8,6 +8,8 @@ size: 16:9
 
 # Laravel
 
+**Encadrant :** ES-SARRAJ FOUAD
+
 ---
 
 <!-- _class: light -->

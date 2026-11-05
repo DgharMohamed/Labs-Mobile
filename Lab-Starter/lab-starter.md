@@ -12,7 +12,7 @@ size: 16:9
 
 <div class="by">
   <strong>Etudiant : Mohamed Dghar</strong>
-  <strong>Prof : ESSARRAJ FOUAD</strong>
+  <strong>Encadrant : ES-SARRAJ FOUAD</strong>
   Development Environment Lab
 </div>
 

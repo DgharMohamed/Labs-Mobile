@@ -19,7 +19,7 @@ size: 16:9
 ### Projet technique : gestion des domaines professionnels
 
 **Étudiant :** Mohamed Dghar<br>
-**Encadrant :** ESSARRAJ FOUAD
+**Encadrant :** ES-SARRAJ FOUAD
 
 ---
 

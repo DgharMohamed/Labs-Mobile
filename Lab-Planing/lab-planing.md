@@ -1,157 +1,99 @@
 ---
 marp: true
 theme: default
+lang: fr-FR
 paginate: true
+header: Lab Planning · Concevoir un Lab technique
+footer: OFPPT · SoliCode
 size: 16:9
 ---
 
-# Lab-Planing
+# Concevoir un Lab technique
+
+### Du besoin au résultat vérifiable
+
+**Étudiant :** Mohamed Dghar<br>
+**Encadrant :** ES-SARRAJ FOUAD
 
 ---
 
-<!-- _class: light -->
+## Plan de présentation
 
-## Lab Plan
-
-1. Introduction
-2. Problems Encountered
-3. Solutions Implemented
-
----
-
-<!-- _class: light -->
-
-## Introduction
-
-Un besoin rencontré pendant la réalisation d’un blog peut devenir un lab technique.
-
-Chaque lab permet d’étudier une partie de la stack, de tester une technique ou d’évaluer une bibliothèque.
-
-**Objectif :** partir d’un besoin et rédiger un plan pratique que l’apprenant peut réaliser et vérifier.
+1. Stack technique et choix des outils
+2. Définitions essentielles
+3. Problème et besoin
+4. Solution et mise en pratique
+5. Résultats, validation et conclusion
 
 ---
 
-<!-- _class: light -->
+## Stack technique · choisir selon le Lab
 
-## Problems Encountered
+| Domaine | Technologies possibles | Exemple de rôle |
+|---|---|---|
+| Serveur | Laravel, PHP | Traiter un formulaire |
+| Données | MySQL, JSON | Enregistrer des données ou répondre à une API |
+| Interface | Blade, Tailwind CSS, Preline UI | Construire et mettre en forme une page |
+| Interactivité | JavaScript, Alpine.js | Ajouter une interaction ou appeler une API |
+| Outils | VS Code, Git, Marp | Développer, versionner et présenter le travail |
 
-- Un besoin trop large donne un lab difficile à terminer.
-- Mélanger le problème et la solution empêche de comprendre ce qu’il faut réellement résoudre.
-- Utiliser toutes les technologies dans chaque exercice ajoute une complexité inutile.
-- Sans livrable ni critère, il est difficile de vérifier la réussite.
-
----
-
-<!-- _class: light -->
-
-## Solutions Implemented
-
-Pour préparer un lab, définir :
-
-1. **Le problème :** que faut-il résoudre pour le blog ?
-2. **La solution :** quel travail l’apprenant doit-il faire et quelles étapes suivre ?
-3. **La technologie :** que faut-il utiliser, tester ou évaluer, et pourquoi ?
-4. **La validation :** quel livrable et quels critères montreront que le problème est résolu ?
+**Ce sont des exemples :** sélectionner seulement les technologies utiles au besoin et vérifier celles du projet cible.
 
 ---
 
-## Problème ou solution ?
+## Définitions essentielles
 
-**Problème :** décrit le besoin ou la difficulté sans imposer la façon de la résoudre.
-
-**Solution / travail à faire :** décrit les étapes concrètes qui permettront de répondre au besoin.
-
-**Exemple :**
-
-- Problème : les lecteurs ne peuvent pas commenter un article.
-- Travail : ajouter un formulaire, valider les données et enregistrer le commentaire.
-
----
-
-## Stack du blog — serveur et données
-
-| Technologie | Exemple de lab |
-| --- | --- |
-| Laravel | Traiter un formulaire |
-| PHP natif | Étudier une notion PHP |
-| MySQL | Enregistrer des articles |
-| JSON | Définir une réponse d’API |
-
-Choisir seulement les technologies nécessaires au lab.
-
----
-
-## Stack du blog — interfaces
-
-| Technologie | Exemple de lab |
-| --- | --- |
-| JavaScript | Appeler une API |
-| Alpine.js | Ajouter une interaction légère |
-| Tailwind CSS | Mettre en forme une page |
-| Preline UI | Intégrer un composant d’interface |
-| Kotlin | Consommer l’API depuis Android |
-
-Preline UI fournit des composants d’interface basés sur Tailwind CSS.
-
----
-
-## Définitions utiles
-
-- **Besoin :** fonctionnalité attendue par un utilisateur du blog.
+- **Besoin :** fonctionnalité attendue par un utilisateur.
 - **Problème :** difficulté précise qui empêche de répondre au besoin.
-- **Lab technique :** exercice limité qui permet d’apprendre en réalisant une tâche.
-- **Critère de validation :** résultat observable qui confirme que le travail est terminé.
+- **Lab technique :** exercice limité pour apprendre en réalisant une tâche concrète.
+- **Livrable :** résultat attendu, par exemple une page, une API ou un test.
+- **Critère de validation :** résultat observable qui confirme que le livrable fonctionne.
+
+**Un bon Lab relie un besoin réel à un travail limité et vérifiable.**
 
 ---
 
-## Exemple : publier un commentaire
+## Problème et besoin · exemple
 
-**Besoin :** les lecteurs doivent pouvoir réagir à un article.
+### Contexte : un blog
 
-**Problème :** un lecteur ne peut pas publier de commentaire sous un article.
+**Besoin :** les lecteurs veulent réagir aux articles.
 
-**Travail à faire :**
+**Problème :** il est impossible de publier un commentaire sous un article.
 
-1. Ajouter un formulaire à la page de l’article.
-2. Valider les données.
-3. Enregistrer le commentaire avec Laravel et MySQL.
-4. Afficher le commentaire après l’envoi.
+**Objectifs du Lab :**
 
----
+- Ajouter un formulaire de commentaire à la page d'un article.
+- Refuser les champs vides avec un message clair.
+- Enregistrer et afficher le commentaire associé à l'article.
 
-## Technologie et résultat attendu
-
-**Technologies :** Laravel et MySQL pour le serveur et le stockage ; Blade, Tailwind CSS et Preline UI pour construire le formulaire et ses composants.
-
-Ajouter JavaScript ou Alpine.js uniquement si une interaction côté navigateur est demandée.
-
-**Critères de validation :**
-
-- un commentaire valide est enregistré pour le bon article ;
-- un champ vide est refusé avec un message compréhensible ;
-- le commentaire publié s’affiche sur la page.
+*Exemple pédagogique à adapter aux fonctionnalités réelles du projet.*
 
 ---
 
-## À vous de pratiquer
+## Solution et mise en pratique
 
-Choisissez un besoin réel du blog, par exemple la recherche d’articles ou l’ajout d’une image.
+1. **Cadrer :** décrire l'utilisateur, le besoin et le problème.
+2. **Choisir :** sélectionner les technologies nécessaires et justifier ce choix.
+3. **Réaliser :** créer le formulaire, valider les données et enregistrer le commentaire.
+4. **Tester :** vérifier un commentaire valide, un champ vide et l'article associé.
+5. **Présenter :** montrer le livrable et expliquer les étapes.
 
-Complétez ce plan :
-
-1. **Besoin :** qui a besoin de quoi ?
-2. **Problème :** qu’est-ce qui manque ou ne fonctionne pas ?
-3. **Travail à faire :** quelles étapes l’apprenant va-t-il suivre ?
-4. **Technologie :** laquelle utiliser ou évaluer, et pourquoi ?
-5. **Livrable :** qu’est-ce que l’apprenant doit produire ?
-6. **Validation :** comment vérifier que le problème est résolu ?
-
-Gardez un objectif limité. N’ajoutez pas une technologie si elle n’est pas utile au problème.
+**Validation attendue :** le commentaire valide s'affiche sous le bon article ; une saisie vide est refusée.
 
 ---
 
-## À retenir
+## Résultats et conclusion
 
-**Besoin du blog → problème clair → étapes de solution → technologie adaptée → résultat vérifiable**
+### À démontrer à la fin du Lab
 
-Un lab porte sur un objectif limité : n’ajoutez pas toute la stack si elle n’est pas nécessaire.
+- Un objectif limité et un livrable fonctionnel.
+- Les critères de validation vérifiés.
+- Une difficulté rencontrée et la solution retenue.
+- Une amélioration possible, sans l'ajouter au périmètre initial.
+
+### À vous de pratiquer
+
+Choisissez un besoin réel du projet, puis rédigez : **besoin · problème · étapes · technologie · livrable · validation**.
+
+*Source d'inspiration : [Lab Planning — plan générique et exemple](https://github.com/mesbahimohammedyassirsolicode-star/lab/tree/main/lab-planning).*

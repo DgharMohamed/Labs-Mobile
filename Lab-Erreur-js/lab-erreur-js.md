@@ -7,6 +7,8 @@ size: 16:9
 
 # Lab : Déboguer JavaScript
 
+**Encadrant :** ES-SARRAJ FOUAD
+
 ## Objectif
 
 Apprendre à comprendre une erreur, trouver sa cause et vérifier une correction.

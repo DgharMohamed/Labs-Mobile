@@ -10,6 +10,8 @@ size: 16:9
 
 # Écrire un prompt clair
 
+**Encadrant :** ES-SARRAJ FOUAD
+
 ## Objectif du lab
 
 Apprendre à formuler une demande précise, à vérifier la réponse de l’IA et à améliorer le prompt si nécessaire.

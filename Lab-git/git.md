@@ -8,6 +8,8 @@ size: 16:9
 
 # Git and GitHub
 
+**Encadrant :** ES-SARRAJ FOUAD
+
 ---
 
 <!-- _class: light -->
