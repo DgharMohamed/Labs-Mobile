@@ -6,6 +6,7 @@ Welcome to the `Labs-Mobile` repository! This repository collects learning labs,
 
 | Lab | Description | Material |
 | --- | --- | --- |
+| Labs and Technical Stack | Discover the purpose of hands-on labs and identify the technologies used in the technical project. | [Lab Stack presentation](Lab-Stack/lab-stack.md) |
 | Markdown | Learn Markdown syntax for headings, formatting, lists, links, images, code, tables, and task lists. | [Markdown guide](Lab-Markdown/markdown.md) |
 | Marp | Create slide decks with Markdown and Marp, and view an exported presentation in a browser. | [Marp presentation](Lab-MARP/marp.md) · [Exported slides](Lab-MARP/index.html) |
 | Antigravity | Practice a supervised AI-agent workflow: plan, review, execute, and verify. | [Antigravity lab](Lab-Antigrafity/Lab_Antigrafity.md) |
