@@ -96,4 +96,3 @@ size: 16:9
 
 Choisissez un besoin réel du projet, puis rédigez : **besoin · problème · étapes · technologie · livrable · validation**.
 
-*Source d'inspiration : [Lab Planning — plan générique et exemple](https://github.com/mesbahimohammedyassirsolicode-star/lab/tree/main/lab-planning).*
