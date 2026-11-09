@@ -12,8 +12,8 @@ size: 16:9
 ![bg brightness:.3](https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=85)
 
 <div class="brand-row">
-<img class="brand-ofppt" src="./assets/OFPPT.jpg" alt="Logo OFPPT">
-<img class="brand-solicode" src="./assets/Solicode.png" alt="Logo SoliCode Tanger">
+<img class="brand-ofppt" src="../assets/OFPPT.jpg" alt="Logo OFPPT">
+<img class="brand-solicode" src="../assets/Solicode.png" alt="Logo SoliCode Tanger">
 </div>
 
 # Gestion des domaines professionnels

@@ -12,26 +12,26 @@ section:first-of-type {
 .brand-row {
   align-items: center;
   display: flex;
-  gap: 20px;
-  margin-bottom: 20px;
+  gap: 12px;
+  margin-bottom: 10px;
 }
 
 .brand-ofppt {
   background: #fff;
   border-radius: 50%;
-  height: 72px;
+  height: 64px;
   object-fit: contain;
   padding: 3px;
-  width: 72px;
+  width: 64px;
 }
 
 .brand-solicode {
   background: #102b45;
-  border-radius: 6px;
-  height: 72px;
+  border-radius: 4px;
+  height: 42px;
   object-fit: contain;
-  padding: 10px;
-  width: 190px;
+  padding: 5px;
+  width: 160px;
 }
 
 section.compact {

@@ -9,8 +9,8 @@ size: 16:9
 ---
 
 <div class="brand-row">
-<img class="brand-ofppt" src="./assets/OFPPT.jpg" alt="Logo OFPPT">
-<img class="brand-solicode" src="./assets/Solicode.png" alt="Logo SoliCode">
+<img class="brand-ofppt" src="../assets/OFPPT.jpg" alt="Logo OFPPT">
+<img class="brand-solicode" src="../assets/Solicode.png" alt="Logo SoliCode">
 </div>
 
 # Découvrir les Labs

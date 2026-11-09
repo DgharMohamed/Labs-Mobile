@@ -8,6 +8,11 @@ footer: OFPPT · SoliCode
 size: 16:9
 ---
 
+<div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px;">
+  <img src="../assets/OFPPT.jpg" alt="Logo OFPPT" width="64" height="64" style="width:64px; height:64px; object-fit:contain;">
+  <img src="../assets/Solicode.png" alt="Logo SoliCode" width="160" height="42" style="width:160px; height:42px; object-fit:contain; background:#fff; padding:4px; border-radius:4px;">
+</div>
+
 # Concevoir un Lab technique
 
 ### Du besoin au résultat vérifiable
@@ -95,4 +100,3 @@ size: 16:9
 ### À vous de pratiquer
 
 Choisissez un besoin réel du projet, puis rédigez : **besoin · problème · étapes · technologie · livrable · validation**.
-

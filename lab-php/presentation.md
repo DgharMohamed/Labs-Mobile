@@ -18,11 +18,13 @@ style: |
   strong { color: #0F766E; }
   ul { line-height: 1.4; }
   li { margin: 0.18em 0; }
-  section.title { background: #0F172A; color: #F8FAFC; text-align: center; justify-content: center; padding: 56px 72px; }
-  section.title h1 { color: #F8FAFC; font-size: 2.6em; border: 0; margin-bottom: 0.25em; }
-  section.title h2 { color: #CBD5E1; font-size: 1.45em; margin-bottom: 1.2em; }
+  section.title { background: #F5F7FA; color: #1F2937; text-align: center; justify-content: center; padding: 48px 72px; }
+  section.title h1 { color: #173B5E; font-size: 2.6em; border: 0; margin-bottom: 0.25em; }
+  section.title h2 { color: #475569; font-size: 1.45em; margin-bottom: 1.2em; }
   section.title p { font-size: 1.15em; line-height: 1.65; }
-  section.title strong { color: #5EEAD4; }
+  section.title strong { color: #087C79; }
+  section.title .logo-ofppt { position: absolute; top: 28px; left: 36px; width: 110px; height: 110px; object-fit: contain; }
+  section.title .logo-solicode { position: absolute; top: 48px; right: 36px; width: 240px; height: 66px; object-fit: contain; background: #fff; padding: 6px; border-radius: 5px; }
   section.problem h1 { color: #B45309; border-color: #F59E0B; }
   section.solution h1 { color: #0F766E; border-color: #14B8A6; }
   pre { font-size: 18px; line-height: 1.25; background: #0F172A; color: #F8FAFC; border-radius: 12px; padding: 18px; }
@@ -31,6 +33,9 @@ style: |
 ---
 
 <!-- _class: title -->
+
+<img class="logo-ofppt" src="../assets/OFPPT.jpg" alt="Logo OFPPT">
+<img class="logo-solicode" src="../assets/Solicode.png" alt="Logo SoliCode">
 
 # lab-php
 
