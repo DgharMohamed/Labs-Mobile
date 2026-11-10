@@ -21,15 +21,29 @@ Ce lab explique trois notions essentielles de PHP à travers un exemple simple (
   - Partager des méthodes (ex. gestion de la date de création) entre plusieurs classes différentes sans duplication (`use MonTrait;`).
 
 ## 3. Réalisation attendue
-- **Format :** Trois petits scripts PHP 8.3 autonomes et exécutables en ligne de commande dans le dossier `pratique/`, avec un guide explicatif (`tutoriel.md`) pour chacun :
-  - `pratique/erreurs-exceptions/` : vérification du titre d'un article et capture de l'erreur.
-  - `pratique/namespaces/` : séparation claire entre un modèle et un dépôt sous le namespace `App\`.
-  - `pratique/traits/` : ajout automatique de dates à un article et à un commentaire via un trait.
-- **Pour tester rapidement :**
-  ```powershell
-  php .\pratique\erreurs-exceptions\exemple.php
-  php .\pratique\namespaces\demo.php
-  php .\pratique\traits\exemple.php
-  ```
-- **Livrable final :** Un support de présentation synthétique dans `presentation.md` (format Marp).
 
+Prompt à soumettre à l'IA pour générer les exemples pratiques du lab :
+
+```text
+Agis en tant que développeur expert PHP. 
+Dans le dossier "pratique/", crée trois exemples pratiques, autonomes et exécutables en PHP 8.3 CLI, accompagnés d'un fichier "tutoriel.md" pour chaque notion :
+
+1. Erreurs et Exceptions (dossier pratique/erreurs-exceptions/) :
+   - Créer une classe Article avec validation des données.
+   - Lever une InvalidArgumentException si le titre est vide ou invalide.
+   - Capturer l'exception via try...catch avec un message propre sans interrompre brutalement le script.
+
+2. Namespaces (dossier pratique/namespaces/) :
+   - Structurer le code sous le namespace racine "App\".
+   - Séparer la classe métier (App\Models\Article) et la classe de stockage (App\Repositories\ArticleRepository).
+   - Implémenter un autoloader simple conforme PSR-4 et importer avec le mot-clé "use".
+
+3. Traits (dossier pratique/traits/) :
+   - Définir un trait partagé (ex: HasTimestamps) gérant la date de création et de modification.
+   - Appliquer ce trait sur deux classes indépendantes (Article et Commentaire).
+
+Consignes :
+- Code léger, sans framework ni base de données externe.
+- Utiliser le typage strict : declare(strict_types=1);.
+- Fournir les commandes PowerShell pour tester chaque exemple en ligne de commande.
+```

@@ -14,7 +14,7 @@ Cette skill orchestre la préparation des livrables d'un lab. Pour la mise en fo
 - **Structure obligatoire du `README.md` (3 parties) :**
   1. `## 1. Besoin du projet technique` : problème concret à résoudre, pourquoi ce lab est nécessaire, et ce qu'il apporte au projet.
   2. `## 2. Notions et techniques à apprendre` : concepts clés expliqués simplement avec de mini-exemples concrets entre parenthèses.
-  3. `## 3. Réalisation attendue` : forme des livrables (scripts légers, tutoriels), contenu par exercice (fil conducteur), et commandes d'exécution rapide (Quick Start).
+  3. `## 3. Réalisation attendue` : rédiger le prompt précis destiné à l'IA pour générer les exemples pratiques du lab (forme, contenu attendu, fil conducteur et contraintes), au lieu de lister les fichiers déjà créés.
 - **Style de rédaction du README :**
   - **Compact :** listes à puces directes et concises, sans longs blocs de texte verbeux.
   - **Facile à comprendre :** langage clair, accessible et vulgarisé, évitant le jargon académique lourd pour une compréhension immédiate.

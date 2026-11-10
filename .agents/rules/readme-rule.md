@@ -9,7 +9,7 @@ trigger: always_on
 - **Structure obligatoire en 3 parties :**
   1. `## 1. Besoin du projet technique` : problème concret à résoudre, pourquoi ce lab est nécessaire, et ce qu'il apporte au projet technique.
   2. `## 2. Notions et techniques à apprendre` : concepts clés expliqués simplement avec de courts exemples concrets entre parenthèses.
-  3. `## 3. Réalisation attendue` : forme des livrables (scripts autonomes légers, tutoriels), contenu par exercice (fil conducteur), et commandes d'exécution rapide (Quick Start).
+  3. `## 3. Réalisation attendue` : rédiger le prompt précis destiné à l'IA pour générer les exemples pratiques du lab (forme, contenu attendu, fil conducteur et contraintes), au lieu de lister les fichiers déjà créés.
 - **Style de rédaction exigé :**
   - **Compact :** listes à puces directes et concises, sans longs blocs de texte verbeux.
   - **Facile à comprendre :** langage vulgarisé, simple et accessible dès la première lecture, sans jargon théorique excessif.
