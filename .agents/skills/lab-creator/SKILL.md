@@ -10,6 +10,14 @@ Cette skill orchestre la préparation des livrables d'un lab. Pour la mise en fo
 ## Règles
 
 - Conserver à l'identique le titre/slug existant du lab, au format `lab-*`. Ne pas le remplacer par un titre reformulé.
+- **Rôle sur le README :** Ne pas générer ou inventer le fichier `README.md` de zéro. L'utilisateur fournit le contenu brut (notes, objectifs, contexte). L'IA le lit, le synthétise et le restructure sans déformer ses intentions.
+- **Structure obligatoire du `README.md` (3 parties) :**
+  1. `## 1. Besoin du projet technique` : problème concret à résoudre, pourquoi ce lab est nécessaire, et ce qu'il apporte au projet.
+  2. `## 2. Notions et techniques à apprendre` : concepts clés expliqués simplement avec de mini-exemples concrets entre parenthèses.
+  3. `## 3. Réalisation attendue` : forme des livrables (scripts légers, tutoriels), contenu par exercice (fil conducteur), et commandes d'exécution rapide (Quick Start).
+- **Style de rédaction du README :**
+  - **Compact :** listes à puces directes et concises, sans longs blocs de texte verbeux.
+  - **Facile à comprendre :** langage clair, accessible et vulgarisé, évitant le jargon académique lourd pour une compréhension immédiate.
 - Lire le README du lab et le plan générique disponible. Si un fichier `template-plan.md` est absent, rechercher le plan générique du workspace et l'utiliser sans prétendre qu'il porte un autre nom.
 - Mettre le plan de présentation dans `presentation.md`. Ne pas dupliquer ni proposer ce plan dans le README.
 - Rédiger en français et adapter les sections génériques aux objectifs et aux notions réellement présents dans le README.
